@@ -1,11 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/index.js"
   },
   "author": "mThanuj",
   "license": "ISC",
-  "description": "a simple todo app to practice backend"
+  "description": "a simple todo app to practice backend",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.0"
+  }
 }
