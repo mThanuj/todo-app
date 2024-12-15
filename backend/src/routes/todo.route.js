@@ -5,6 +5,7 @@ import {
   getTodoById,
   updateTodo,
   deleteTodo,
+  markTodoComplete,
 } from "../controllers/todo.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 
@@ -16,6 +17,13 @@ router.route("/create-todo").post(createTodo);
 
 router.route("/").get(getAllTodos);
 
-router.route("/:todoId").get(getTodoById).patch(updateTodo).delete(deleteTodo);
+router
+  .route("/:todoId")
+  .get(getTodoById)
+  .patch(updateTodo)
+  .patch()
+  .delete(deleteTodo);
+
+router.route("/complete/:todoId").patch(markTodoComplete);
 
 export default router;

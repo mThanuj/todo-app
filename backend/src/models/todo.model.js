@@ -7,7 +7,6 @@ const todoSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: false,
   },
   createdBy: {
     type: mongoose.Schema.Types.ObjectId,
