@@ -4,7 +4,7 @@ import { PORT } from "./constants.js";
 
 connectDB()
   .then(() => {
-    app.use((err, _, res, _) => {
+    app.use((err, _, res, __) => {
       return res.status(err.statusCode).json({
         message: err.message,
       });
