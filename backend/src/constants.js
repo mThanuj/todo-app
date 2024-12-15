@@ -1,4 +1,3 @@
-import bcryptjs from "bcryptjs";
 import { config } from "dotenv";
 config({
   path: "./.env",
